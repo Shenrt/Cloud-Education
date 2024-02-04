@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cloud Education</title>
+    <link rel="icon" href="./images/Frame.svg" type="svg/x-icon" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./images/Logo.svg" alt="Logo" />
+        <div class="menu-icon">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="items">
+        <a class="active" href="#">Discover</a>
+        <a href="#">Community</a>
+        <div class="dropdown">
+          <a href="#"
+            >Services
+            <img src="./images/dropdown.svg" alt="" />
+          </a>
+          <div class="nav-content">
+            <a href="#">Service 1</a>
+            <a href="#">Service 2</a>
+            <a href="#">Service 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#"
+            >More
+            <img src="./images/dropdown.svg" alt="" />
+          </a>
+          <div class="nav-content">
+            <a href="#">More 1</a>
+            <a href="#">More 2</a>
+            <a href="#">More 3</a>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="nav-button1">Sign in</button>
+        <button class="nav-button2">
+          <img src="./images/plus.svg" alt="" /> Download App
+        </button>
+      </div>
+    </nav>
+    <div class="college">
+      <img src="./images/school.png" alt="" />
+    </div>
+    <div class="about" class="about-head">
+      <p>Discover College & Universities For Your Abroad Education</p>
+      <p class="about-desc">
+        Everything you need for your abroad education is here. Discover global
+        opportunities with us.
+      </p>
+    </div>
+    <div class="heeder">
+      <div class="search-area">
+        <div class="input-container">
+          <input
+            type="text"
+            id="input"
+            placeholder="Search universities, courses"
+          />
+          <img src="./images/search.svg" alt="search" id="search" />
+        </div>
+        <button id="search-btn">Search</button>
+        <div class="options">
+          <select id="countries">
+            <option value="country" selected disabled>Countries</option>
+            <option value="nepal">Nepal</option>
+            <option value="australia">Australia</option>
+            <option value="india">India</option>
+          </select>
+          <select id="cources">
+            <option value="course" selected disabled>Courses</option>
+            <option value="nepal">Java</option>
+            <option value="australia">Html/css</option>
+            <option value="india">Data mining</option>
+          </select>
+          <select id="degree">
+            <option value="deg" selected disabled>Degree</option>
+            <option value="nepal">SEE</option>
+            <option value="australia">Bachelor</option>
+            <option value="india">Masters</option>
+          </select>
+          <select id="duration">
+            <option value="dur" selected disabled>Duration</option>
+            <option value="nepal">1 month</option>
+            <option value="australia">3 month</option>
+            <option value="india">1 year</option>
+          </select>
+          <select id="fees">
+            <option value="fee" selected disabled>Fees</option>
+            <option value="nepal">AED 20,000</option>
+            <option value="australia">CAD 30,009</option>
+            <option value="india">AUD 83,000</option>
+          </select>
+          <select id="intake">
+            <option value="intk" selected disabled>Intake</option>
+            <option value="nepal">January</option>
+            <option value="australia">July</option>
+          </select>
+
+          <div class="sort-by">
+            <img src="./images/filter.svg" alt="filter img" />
+            <div>Apply Filter</div>
+          </div>
+        </div>
+      </div>
+      <div class="result-showing">
+        <div class="result">
+          <p
+            style="
+              color: rgba(96, 103, 127, 1);
+              font-family: Noto Sans;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 1px;
+              letter-spacing: 0em;
+            "
+          >
+            Showing results for
+          </p>
+          <br />
+          <p
+            style="
+              color: rgba(44, 47, 58, 1);
+              font-family: Noto Sans;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1px;
+              letter-spacing: 0em;
+            "
+          >
+            All Colleges and Universities
+          </p>
+        </div>
+        <div class="sort-by">
+          <label for="sort" style="font-size: 11px; color: rgba(44, 47, 58, 1)"
+            >Sort by:</label
+          >
+          <select id="sorting">
+            <option value="country" selected>Fee(low-high)</option>
+            <option value="nepal">Fee(high-low)</option>
+            <option value="australia">Ratings(low-high)</option>
+            <option value="india">Ratings(low-high)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="underline"></div>
+    <div class="grid-container">
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school1.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Melbourne Institute of Technology</p>
+            <p class="college-address">Sydney, Australia</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Master of Technology (Enterprise Systems and Business Analytics)
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">AUD 20,000</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">2 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school2.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Central Queensland University</p>
+            <p class="college-address">New South Wales, Australia</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Master of Business Administration (Coursework)
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">AUD 39,000</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">2 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school1.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Swinburne University of Technology</p>
+            <p class="college-address">Vancouver, Canada</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Graduate Diploma in Early Childhood Education (Extension)
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">CAD 38,614</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">1 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school4.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Central Queensland University</p>
+            <p class="college-address">New South Wales, Australia</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Master in Information and Communication Technology
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">AUD 39,500</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">2 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school5.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Griffith University</p>
+            <p class="college-address">Nova Scotia, Canada</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">Bachelor of Arts in Anthropology</p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">CAD 39,500</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">4 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school1.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Griffith University</p>
+            <p class="college-address">Queensland, Australia</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Master of Audio Engineering and Sound Production (Coursework)
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">AUD 39,500</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">2 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school1.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Melbourne Institute of Technology</p>
+            <p class="college-address">Sydney, Australia</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Master of Technology (Enterprise Systems and Business Analytics)
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">AUD 20,000</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">2 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school2.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Central Queensland University</p>
+            <p class="college-address">New South Wales, Australia</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Master of Business Administration (Coursework)
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">AUD 39,000</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">2 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school1.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Swinburne University of Technology</p>
+            <p class="college-address">Vancouver, Canada</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Graduate Diploma in Early Childhood Education (Extension)
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">CAD 38,614</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">1 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school4.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Central Queensland University</p>
+            <p class="college-address">New South Wales, Australia</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Master in Information and Communication Technology
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">AUD 39,500</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">2 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school4.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Griffith University</p>
+            <p class="college-address">Nova Scotia, Canada</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">Bachelor of Arts in Anthropology</p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">CAD 39,500</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">4 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <img src="./images/school5.svg" alt="" class="school-logo" />
+          <div class="college-info">
+            <p class="college-name">Griffith University</p>
+            <p class="college-address">Queensland, Australia</p>
+          </div>
+          <img src="./images/love.svg" alt="" class="heart-icon" />
+        </div>
+        <div class="card-detail">
+          <p class="course-name-title">Course Name</p>
+          <p class="course-name">
+            Master of Audio Engineering and Sound Production (Coursework)
+          </p>
+          <div class="card-fee">
+            <div class="fee-year">
+              <p class="per-year">Fee per Year</p>
+              <p class="aud">AUD 39,500</p>
+            </div>
+            <div class="duration">
+              <p class="dur">Duration</p>
+              <p class="year">2 Year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="something">
+      <p class="out-of">Showing 1 to 12 of 100 results</p>
+      <div class="preview">
+        <div>Prev</div>
+        <div class="one">1</div>
+        <div class="1">2</div>
+        <div class="1">3</div>
+        <div class="1">4</div>
+        <div class="1">...</div>
+        <div class="1">100</div>
+        <div class="next">Next</div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row">
+        <div class="left">
+          <div class="foot-logo">
+            <img src="./images/logo1.svg" />
+          </div>
+          <div class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="right">
+          <div class="links">
+            <h3>Quick Links</h3>
+            <a>Discover</a>
+            <a>Community</a>
+            <a>Apply Visa</a>
+            <a>Success Stories</a>
+          </div>
+          <div class="legal">
+            <h3>Legal</h3>
+            <a>Cookies Policy</a>
+            <a>Privacy Policy</a>
+            <a>Terms of Service</a>
+          </div>
+          <div class="app hide-on">
+            <h3>Get App</h3>
+            <a><img src="./images/App Store Badge.svg" /></a>
+            <a><img src="./images/Google Play Badge.svg" /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="app app2">
+            <h3>Get App</h3>
+            <a><img src="./images/App Store Badge.svg" /></a>
+            <a><img src="./images/Google Play Badge.svg" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="underline-bottom"></div>
+      <div class="bottom-footer">
+        <p class="copyright">
+          Copyright © 2024 Cloud Education. All rights reserved.
+        </p>
+        <div class="social-links">
+          <div class="facabook"><img src="./images/facebook.svg" alt="" /></div>
+          <div class="twitter"><img src="./images/twitter.svg" alt="" /></div>
+          <div class="youtube"><img src="./images/youtube.svg" alt="" /></div>
+          <div class="linkin"><img src="./images/linkin.svg" alt="" /></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
