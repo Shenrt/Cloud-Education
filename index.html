@@ -3,20 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>Cloud Education</title>
     <link rel="icon" href="./images/Frame.svg" type="svg/x-icon" />
   </head>
   <body>
     <nav>
+      <div class="navlinks">
       <div class="logo">
         <img src="./images/Logo.svg" alt="Logo" />
-        <div class="menu-icon">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
       </div>
+
 
       <div class="items">
         <a class="active" href="#">Discover</a>
@@ -44,6 +42,12 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="menu-icon">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
       <div class="buttons">
         <button class="nav-button1">Sign in</button>
         <button class="nav-button2">
@@ -51,11 +55,12 @@
         </button>
       </div>
     </nav>
-    <div class="college">
+    <!-- <div class="college">
       <img src="./images/school.png" alt="" />
-    </div>
+    </div> -->
     <div class="about" class="about-head">
-      <p>Discover College & Universities For Your Abroad Education</p>
+      <div class="overlay"></div>
+      <p class="heading">Discover College & Universities For Your Abroad Education</p>
       <p class="about-desc">
         Everything you need for your abroad education is here. Discover global
         opportunities with us.
@@ -64,14 +69,15 @@
     <div class="heeder">
       <div class="search-area">
         <div class="input-container">
+          <!-- <img src="/images/search.svg" id="searchicon"> -->
           <input
             type="text"
             id="input"
             placeholder="Search universities, courses"
           />
-          <img src="./images/search.svg" alt="search" id="search" />
+          <button id="search-btn">Search</button>
         </div>
-        <button id="search-btn">Search</button>
+
         <div class="options">
           <select id="countries">
             <option value="country" selected disabled>Countries</option>
@@ -108,13 +114,15 @@
             <option value="nepal">January</option>
             <option value="australia">July</option>
           </select>
+        </div>
 
-          <div class="sort-by">
-            <img src="./images/filter.svg" alt="filter img" />
-            <div>Apply Filter</div>
-          </div>
+        <div class="applyfilter">
+          <img src="./images/filter.svg" alt="filter img" />
+          <div>Apply Filter</div>
         </div>
       </div>
+
+
       <div class="result-showing">
         <div class="result">
           <p
@@ -155,6 +163,8 @@
           </select>
         </div>
       </div>
+
+
     </div>
     <div class="underline"></div>
     <div class="grid-container">
@@ -478,6 +488,7 @@
         </div>
       </div>
     </div>
+
     <div class="something">
       <p class="out-of">Showing 1 to 12 of 100 results</p>
       <div class="preview">
@@ -517,21 +528,22 @@
             <a>Privacy Policy</a>
             <a>Terms of Service</a>
           </div>
-          <div class="app hide-on">
+          <div class="app-hide-on">
             <h3>Get App</h3>
             <a><img src="./images/App Store Badge.svg" /></a>
             <a><img src="./images/Google Play Badge.svg" /></a>
           </div>
         </div>
-        <div class="row">
-          <div class="app app2">
+
+          <div class="app-app2">
             <h3>Get App</h3>
+            <div class="app-app2-links">
             <a><img src="./images/App Store Badge.svg" /></a>
             <a><img src="./images/Google Play Badge.svg" /></a>
           </div>
-        </div>
+          </div>
       </div>
-      <div class="underline-bottom"></div>
+      <div class="underline2"></div>
       <div class="bottom-footer">
         <p class="copyright">
           Copyright © 2024 Cloud Education. All rights reserved.

@@ -1,8 +1,12 @@
+html{
+  overflow-x: hidden;
+}
 body {
   font-family: Noto sans;
   margin: 0;
   padding: 0;
   background-color: white;
+  overflow-x: hidden;
 }
 
 nav {
@@ -24,7 +28,6 @@ nav {
 .items {
   display: flex;
   align-items: center;
-  margin-right: 470px;
 }
 .items .active {
   color: rgba(15, 50, 177, 1);
@@ -39,8 +42,9 @@ nav a {
 }
 
 .items a {
-  display: block;
-  float: left;
+  display: flex;
+  gap: 6px;
+  align-items: center;
 }
 
 .items a:hover {
@@ -56,6 +60,12 @@ nav a {
   position: relative;
 }
 
+.navlinks{
+  display: flex;
+  align-items: center;
+  padding-left: 5.3rem;
+}
+
 .dropdown:hover .nav-content {
   display: block;
 }
@@ -67,7 +77,11 @@ nav a {
   min-width: 100px;
   top: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 11;
+}
+
+.dropdown:hover .nav-content {
+  display: block;
 }
 
 .nav-content a {
@@ -84,8 +98,18 @@ nav a {
 }
 
 .buttons {
-  margin-right: 88px;
+  margin-right: 7.5rem;
   align-items: center;
+}
+.heading{
+  font-size: 42px;
+  padding: 0;
+  margin: 0;
+}
+.about-desc{
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-button1 {
@@ -132,9 +156,10 @@ nav a {
   filter: brightness(55%);
 }
 .heeder {
-  margin-top: 7.5rem;
-  height: 4.5rem;
+  display: flex;
+  justify-content: center;
 }
+
 .college {
   position: relative;
   text-align: center;
@@ -142,66 +167,112 @@ nav a {
 }
 
 .about {
-  position: absolute;
-  top: 209px;
+  position: relative;
   color: rgba(255, 255, 255, 1);
-  left: 50%;
-  width: 899px;
+  width: 100%;
   font-size: 32px;
   text-align: center;
-  transform: translate(-50%, -50%);
+  background-image: url("./images/school.png");
+  z-index: 10;
+  padding: 10rem 0 10rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.about-desc {
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+} */
+
+.about h1,
+.about p {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+}
+
+.about img {
+  filter: brightness(55%);
+}
+
+/* .about-desc {
   font-size: 16px;
   line-height: 20px;
-}
+} */
+
 .search-area {
-  position: absolute;
-  background: rgba(255, 255, 255, 1);
+  width: 80%;
+  padding: 2rem;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  display: flex;
+  background: white;
+  flex-direction: column;
+  justify-content: center;
   box-shadow: 0px 2px 12px 0px rgba(176, 184, 211, 0.5),
     0px 2px 4px 0px rgba(172, 188, 245, 0.5);
-  top: 20rem;
-  left: 49.5%;
-  transform: translate(-49.3%, 18%);
-  border-radius: 12px;
-  height: 155px;
-  width: 87.2%;
-  border: 1px;
+    position: absolute;
+    transform: translate(0%, -50%);
+    z-index: 12;
 }
 .input-container {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  position: relative;
   margin-left: 24px;
   margin-top: 24px;
-  width: 1139px;
+  width: 99%;
   height: 40px;
-  border: 1px solid rgba(209, 211, 220, 1);
-  border-radius: 100px;
+ 
 }
+
 #input {
-  width: 1000px;
-  height: 32px;
-  border: none;
+  width: 100%;
+  border: 1px solid rgba(209, 211, 220, 1);
+  height: 42px;
+  font-size: 17px;
+  border-radius: 100px;
   outline: none;
   margin-top: 2px;
+  margin-right: 2%;
+  padding-left: 40px;
+  background: url(/images/search.svg) no-repeat 10px ;
+  background-size: 27px 27px;
 }
 #search {
-  float: left;
-  margin-top: 10px;
-  padding-left: 16px;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
+
+
 #search-btn {
-  position: absolute;
-  margin-top: 24px;
-  margin-left: 1194px;
+  position: relative;
   background: rgba(15, 50, 177, 1);
   border-radius: 100px;
   border: 1px;
+  font-size: 18px;
   color: white;
   box-shadow: 0px 2px 12px 0px rgba(176, 184, 211, 0.5),
     0px 2px 4px 0px rgba(172, 188, 245, 0.5);
-  height: 40px;
-  width: 110px;
+  height: 44px;
+  width: 10%;
   transition: transform 0.3s ease-in-out;
 }
 #search-btn:hover {
@@ -209,18 +280,29 @@ nav a {
   transform: scale(1.1);
 }
 .options {
-  position: absolute;
-  margin-left: 16px;
-  margin-top: 83px;
-  width: 1306px;
-}
+  display: flex;
+  position: relative;
+  width: auto;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-between;
+  gap: 4px;
+  margin: 1rem;
+  margin-top: 2rem;
+} 
 select:hover {
   cursor: pointer;
 }
+
+.select-container {
+  flex: 1; /* Take up available space */
+  max-width: calc(20% - 8px); /* Adjust as needed */
+}
+
 select {
-  width: 196px;
+  width: 15%;
   padding: 10px;
-  height: 41px;
+  height: 40px;
+  font-size: 17px;
   border-radius: 8px;
   appearance: none;
   background-image: url(./images/dropdown.svg);
@@ -239,15 +321,15 @@ select {
 }
 
 .result-showing {
+  padding-top: 9rem;
+  padding-bottom: 1rem;
   display: flex;
   justify-content: center;
+  gap: 5rem;
   align-items: center;
-  align-items: center;
-  margin: 100px 10px;
-  height: 48px;
-}
-.result {
-  margin-right: 71.4rem;
+  position: relative;
+  justify-content: space-between;
+  width: 84%;
 }
 .result p {
   display: inline;
@@ -261,19 +343,22 @@ select {
   font-size: 12px;
   background-color: white;
   border-radius: 8px;
-  border: 1px solid rgba(96, 103, 127, 1);
+  border: 1px solid rgba(209, 211, 220, 1);
 }
-.sort-by {
-  position: absolute;
-  margin-left: 71.8rem;
-}
+/* .sort-by {
+  flex-basis: calc(20% - 8px);
+  position: relative;
+} */
+
 .underline {
+  width: 84%;
+  margin: 1rem auto 0;
   display: flex;
-  width: 87.1vw;
-  margin-left: 99px;
-  margin-bottom: 120px;
-  border-bottom: 1px solid rgba(209, 211, 220, 1);
+  justify-content: center;
+  align-items: center;
+ border-bottom: 1px solid rgba(209, 211, 220, 1);
 }
+
 
 .card:hover {
   box-shadow: 0px 2px 12px 0px rgba(176, 184, 211, 0.5),
@@ -293,6 +378,8 @@ select {
   margin-top: 17px;
 }
 .college-name {
+  display: flex;
+ align-items: center;
   width: 200px;
   margin: 0;
   padding: 0;
@@ -304,6 +391,7 @@ select {
 .college-address {
   margin-top: 6px;
   padding: 0;
+  margin: 0;
   font-size: 12px;
   font-weight: 450;
   color: rgba(96, 103, 127, 1);
@@ -378,13 +466,10 @@ select {
     brightness(94%) contrast(120%);
 }
 
-.grid-container {
+/* .grid-container {
   display: grid;
-  width: 87.2vw;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  margin-top: -88px;
-  margin-left: 100px;
+  gap: 20px;
 }
 
 .card {
@@ -393,46 +478,94 @@ select {
   height: 250px;
   width: 430px;
   transition: transform 0.2s ease-in-out;
+} */
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  
+  margin: auto; 
+  margin-top: 2rem;
 }
+
+
+.card {
+  width: calc(33.33% - 16px); /* Three cards in one line with some spacing */
+  box-sizing: border-box;
+  border: 1px solid #ddd; /* Add border or styling as needed */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
 .something {
   font-size: 14px;
   display: flex;
   gap: 30px;
-  margin-left: 100px;
-  margin-top: 25px;
+  width: 84%;
+  margin: 1rem auto 1rem;
+  justify-content: space-between;
+  align-items: center;
 }
 .out-of {
   color: rgba(44, 47, 58, 1);
   font-weight: 400;
-  width: 1000px;
 }
 .preview {
   display: flex;
-  gap: 10px;
-  margin-top: 14px;
-  margin-left: 99px;
+  gap: 20px;
   flex-direction: row;
   float: right;
+  font-size: 20px;
 }
 .one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px;
   background: rgba(15, 50, 177, 1);
   border-radius: 100%;
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
+  margin-top: 3px;
   text-align: center;
   color: white;
 }
 .next {
   color: rgba(15, 50, 177, 1);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
   margin-top: -1px;
 }
-.preview div:hover {
+.preview div:hover{
+  cursor: pointer;
+  transform: translateY(3px);}
+
+.links a:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+  color: white;
+}
+
+.legal a:hover {
+  cursor: pointer;
+  color: white;
+  transform: translateY(3px);}
+
+.app-hide-on img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.social-links img:hover {
   cursor: pointer;
 }
-footer {
+
+/* footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -552,11 +685,129 @@ footer {
 }
 .social-links img:hover {
   cursor: pointer;
+} */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem 0 3rem 0;
+  background-color: #061447;
+  color: white;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 84%;
+}
+
+
+.foot-logo img {
+  max-width: 20rem;
+}
+
+.description {
+  margin-top: 20px;
+  line-height: 1.5;
+  width: 50%;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+a {
+  display: block;
+  color: #c4c4c4;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.app img {
+  max-width: 120px;
+}
+
+.left {
+  margin-bottom: 19px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.right {
+  display: flex;
+  gap: 80px;
+  width: 50%;
+  margin-left: 66px;
+}
+
+.underline-bottom {
+  height: 2px;
+  background-color: #fff;
+  margin: 20px 0;
+}
+
+.bottom-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 84%;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links div {
+  margin-right: 15px;
+}
+
+.copyright {
+  font-size: 0.9em;
+}
+
+.options .sort-by {
+  display: none;
+}
+
+.app-app2{
+  display: none;
+}
+
+.applyfilter{
+  display: none;
+}
+
+.underline2{
+  width: 84%;
+  margin: 2rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+/* media query starts */
+
 @media (max-width: 768px) {
+.heart-icon{
+  margin-left: 24px;
+}
+  html{
+    zoom: 0.47;
+  }
+
   nav {
     flex-direction: column;
+  }
+
+  .card {
+    width: 100%; /* Show one card per line below 768px */
   }
 
   .items {
@@ -575,243 +826,229 @@ footer {
   .buttons {
     margin-top: 15px;
   }
-}
-
-@media screen and (min-width: 426px) {
-  .options .sort-by {
-    display: none;
-  }
-  .app2 {
-    display: none;
-  }
-  footer .right .row {
-    display: none;
-  }
-}
-
-/* samsung galaxy note 20 android 11 */
-
-@media screen and (max-width: 426px) {
-  body {
-    width: 426px;
-    overflow-x: hidden !important;
-  }
-
-  .something {
-    overflow-x: hidden;
-  }
-
-  .about {
-    width: 361px;
-    margin-left: 0.6px;
-    text-align: left;
-    font-size: 22px;
-    line-height: 28px;
-  }
-  .college img {
-    height: 360px;
-  }
-  .about-head {
-    text-align: left;
-    font-size: 25px;
-  }
-  .about-desc {
-    font-size: 14px;
-    width: 280px;
-    height: 100px;
-    line-height: 20px;
-  }
-  .items {
-    display: none;
-  }
-
-  .input-container {
-    width: 80vw;
-    margin-left: 14px;
-  }
-
-  .input-container #input {
-    width: 50vw;
-    padding-left: 10px;
-  }
-
-  .options .sort-by {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 25%;
-  }
-
-  .sort-by img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .search-area {
-    transform: translate(-49.5%, 22%);
-    justify-content: center;
-    overflow-x: hidden;
-  }
-
-  #search-btn {
-    display: none;
-  }
-  .course-name {
-    font-size: 13px;
-  }
-
-  .grid-container {
-    display: block;
-    gap: 20px;
-    margin-left: 1.5rem;
-  }
-
-  .out-of {
-    width: 80vw;
-  }
-
-  .result-showing .result {
-    margin-right: 11.2rem;
-  }
-
-  .result-showing .sort-by {
-    display: none;
-  }
-
-  .options > :not(.sort-by) {
-    display: none;
-  }
-
-  .underline {
-    margin-left: 1.7rem;
-  }
-
-  .card {
-    width: 99.1%;
-    margin: 15px 3px;
-  }
-
-  .heart-icon {
-    width: 16px;
-    height: 16px;
-  }
-
-  .card-title {
-    width: 90%;
-  }
-
-  .college-name {
-    width: 100%;
-    font-size: 13px;
-  }
-
-  .college-address {
-    width: 100%;
-    font-size: 11px;
-    margin-bottom: 10px;
-  }
-
-  .card-detail {
-    width: 80%;
-  }
-
-  .card-detail .dur {
-    margin-right: 0;
-  }
-
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin-top: 80px;
-    margin-left: -0.7rem;
-    overflow-x: hidden;
-  }
 
   footer .row {
+    display: flex;
     flex-direction: column;
-    margin-left: 0;
-    margin: 1rem 0 0 0;
-  }
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #061447;
+    position: relative;
+}
 
-  .row .left {
-    width: 100vw;
-  }
+.left, .right{
+  width: 100%;
+  margin: 0 0 2rem 0;
+}
 
-  footer .right {
-    gap: 0;
-    width: 100%;
-    padding: 0 20px;
-    overflow-x: hidden;
-  }
+.menu-icon div {
+  width: 35px;
+  height: 4px;
+  background-color: black;
+  margin: 6px 0;
+}
 
-  footer .right .hide-on {
+.logo{
+  margin: 0;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem 0 2rem;
+}
+
+.items, .buttons{
+  display: none;
+}
+
+.bottom-footer{
+  gap: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  width: 84%;
+}
+
+.row{
+  flex-direction: column;
+}
+
+
+.app-hide-on{
+  display: none;
+}
+
+.app-app2{
+  width: 100%;
+  display: block;
+  
+}
+
+.underline{
+  width: 84%;
+}
+
+.underline2{
+  width: 84%;
+  margin: 1rem auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+.app-app2-links{
+  display: flex;
+  gap: 2rem;
+}
+
+
+.something{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 85%;
+  justify-content: space-between;
+}
+
+.something .out-of{
+  font-size: 16px;
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.something .preview, .something .preview .next{
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.one{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: 18px;
+}
+
+.options{
+  display: none;
+}
+
+.applyfilter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.applyfilter img{
+  width: 35px;
+  margin-right: 5px;
+}
+
+#search-btn{
+  display: none;
+}
+
+#input{
+  width: 100%;
+}
+
+.input-container{
+  width: 100%;
+  margin: 0;
+}
+
+.sort-by{
+  display: none;
+}
+
+.search-area{
+  width: 70%;
+}
+
+.grid-container{
+  margin-top: 2rem;
+}
+
+.result-showing{
+  padding-top: 6rem;
+}
+
+.about{
+  height: 10vh;
+}
+
+.about p:nth-of-type(1){
+  font-size: 22px;
+  margin-top: -2rem;
+}
+
+.about p:nth-of-type(2){
+  font-size: 16px;
+}
+
+.about p{
+  width: 80%;
+  text-align: left;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 2rem;
+}
+
+}
+
+@media screen and (max-width: 970px){
+  .buttons{
     display: none;
   }
 
-  footer .row .row {
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 20px 0 0 66px;
-    width: 100%;
-  }
-
-  .row .app2 {
+  .menu-icon{
     display: block;
-    gap: 20px;
-    margin-right: auto;
   }
 
-  .row .app2 a {
-    margin: 10px;
-  }
-
-  footer .bottom-footer {
-    gap: 0;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .logo {
-    display: flex;
-    margin-left: -1.2rem;
-    margin-top: 16px;
-  }
-  .buttons {
-    display: none;
-  }
-
-  .something {
-    margin-left: 28px;
-    flex-direction: column;
-    gap: 0;
-    margin-bottom: 1rem;
-  }
-  .card-fee {
-    margin-right: 140px;
-    font-size: 10px;
-  }
-  .out-of {
-    width: 80%;
-  }
-
-  .preview {
-    margin-left: 0;
-    gap: 30px;
-  }
-  .social-links img {
-    height: 25px;
-    width: 25px;
-  }
   .menu-icon div {
     width: 35px;
     height: 4px;
     background-color: black;
     margin: 6px 0;
   }
-  .menu-icon {
-    margin-left: 8.7rem;
+  #search-btn{
+    font-size: 12px;
+  }
+  select{
+    font-size: 13px;
+  }
+  nav{
+    padding: 0 3rem;
   }
 }
+
+@media screen and (max-width: 1117px){
+  .buttons{
+    display: none;
+  }
+.search-btn{
+  font-size: 15px;
+}
+  .menu-icon{
+    display: block;
+  }
+
+  .menu-icon div {
+    width: 35px;
+    height: 4px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+  nav{
+    padding: 0 3rem;
+  }
+}
+
